@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+  body {
+    background-color: lightblue;
+  }
+</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TeamEase - Smart Staffing for Smart Events</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>TeamEase</h1>
+      <p>Smart Staffing for Smart Events</p>
+      <a href="#contact" class="btn">Hire Staff Now</a>
+    </div>
+  </header>
+
+  <section class="about">
+    <div class="container">
+      <h2>About TeamEase</h2>
+      <p>TeamEase is your trusted platform for hiring verified, reliable, and on-demand event staff. We help organizers and businesses find manpower for all event types quickly and easily.</p>
+    </div>
+  </section>
+
+  <section class="how-it-works">
+    <div class="container">
+      <h2>How It Works</h2>
+      <ol>
+        <li><strong>Post Requirements:</strong> Share your event details</li>
+        <li><strong>Get Matched:</strong> We connect you with verified staff</li>
+        <li><strong>Coordinate & Execute:</strong> Relax and let us handle it</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form id="whatsapp-form">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="tel" id="phone" placeholder="Your Phone Number" required />
+        <textarea id="message" placeholder="Your Message (e.g., I need 4 staff on 15th Aug)" required></textarea>
+        <button type="submit">Send via WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 TeamEase | Follow us on <a href="https://www.instagram.com/teamvishal_official_?igsh=OGY2Y3BmOTlkZTBl" target="_blank">Instagram</a></p>
+  </footer>
+
+  <script>
+    document.getElementById("whatsapp-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      var name = document.getElementById("name").value;
+      var phone = document.getElementById("phone").value;
+      var message = document.getElementById("message").value;
+
+      var url = "https://wa.me/919482617284?text=" +
+        encodeURIComponent("Hello TeamEase,%0AMy Name: " + name +
+        "%0APhone: " + phone +
+        "%0AMessage: " + message);
+
+      window.open(url, "_blank");
+    });
+  </script>
+
+</body>
+</html>
